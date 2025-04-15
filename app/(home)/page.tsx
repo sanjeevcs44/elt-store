@@ -1,13 +1,12 @@
 import { HomeCarousel } from '@/components/shared/home/home-carousel'
 import { HomeCard } from '@/components/shared/home/home-card'
-import { Card, CardContent } from '@/components/ui/card'
+
 import data from '@/lib/data'
 import {
   getAllCategories,
   getProductsForCard,
 } from '@/lib/actions/product.actions'
 import { toSlug } from '@/lib/utils'
-import { CarouselPrevious } from '@/components/ui/carousel'
 
 export default async function HomePage() {
   const categories = (await getAllCategories()).slice(0, 4)
